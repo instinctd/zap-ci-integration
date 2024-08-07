@@ -51,7 +51,10 @@ curl -X POST http://localhost:5000/webhook \
         }'
 
 ```
-
+Example unit-test run:
+``` 
+python3 -m unittest discover -s . -p "test_app.py"
+```
 # Logging
 The application logs important events and errors using Python's built-in logging module.
 
@@ -62,9 +65,7 @@ The application logs important events and errors using Python's built-in logging
 
 - Configuration Management: Consider using a configuration management tool like dotenv to manage environment variables more effectively.
 - Error Handling: Improve error handling, especially for file operations and network requests, to provide more detailed feedback in case of failures.
-- Unit Tests: Add unit tests to ensure the functionality of the application is robust and to prevent future regressions.
 - Concurrency Management: Evaluate and optimize the concurrency model, possibly using a task queue like Celery for managing scan tasks more efficiently.
 - Security: Ensure sensitive data is handled securely, especially API keys and scan results.
 - Documentation: Expand the documentation to include detailed setup instructions, API endpoint descriptions, and example payloads.
-- Containerization: Consider containerizing the application using Docker to simplify deployment and ensure consistency across different environments.
 -  Error Reporting: Implement more detailed logging and error reporting, potentially integrating with an error tracking tool like Sentry.
