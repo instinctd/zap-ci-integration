@@ -1,15 +1,3 @@
-# Пример запроса
-```
-curl -X POST http://localhost:5000/webhook \
-    -H "Content-Type: application/json" \
-    -d '{
-          "image": "example.com",
-          "engagement_id": "12345"
-        }'
-
-```
-
-
 # ZAP Scan and DefectDojo Integration
 This project integrates OWASP Zed Attack Proxy (ZAP) with DefectDojo, providing automated security scanning and report uploading.
 
@@ -51,14 +39,18 @@ The application listens for POST requests on the /webhook endpoint. The request 
 
 image: The target URL to be scanned.
 engagement_id: The DefectDojo engagement ID.
+
 Example request:
 
-json
-Копировать код
-{
-    "image": "example.com",
-    "engagement_id": 123
-}
+```
+curl -X POST http://localhost:5000/webhook \
+    -H "Content-Type: application/json" \
+    -d '{
+          "image": "example.com",
+          "engagement_id": "12345"
+        }'
+
+```
 
 # Logging
 The application logs important events and errors using Python's built-in logging module.
